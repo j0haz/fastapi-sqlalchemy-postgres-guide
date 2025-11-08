@@ -1,0 +1,5 @@
+fastapi[standard]                   # web server
+pydantic                            # validation of user requests
+sqlalchemy                          # ORM
+psycopg2-binary                     # PostgreSQL driver for SQLAlchemy.
+jinja2                              # template engine the same one used by Flask and other tools.

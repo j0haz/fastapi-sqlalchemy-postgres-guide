@@ -1,0 +1,13 @@
+body {
+    margin: 10vw;
+    
+    background-color: rgb(1, 10, 20);
+    
+    color: #475;
+    font-weight: bold;
+    font-size: 1.2vh;
+    
+    pre {
+        overflow-x: auto;
+    }
+}

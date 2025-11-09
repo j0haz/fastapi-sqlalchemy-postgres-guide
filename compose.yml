@@ -1,24 +1,13 @@
 services:
 
-  db:
-    image: postgres:latest
-    container_name: postgres-db
-    env_file:
-      - .env
-    volumes:
-      - ./postgresql-data:/var/lib/postgresql/
-    networks:
-      - network-web-services
-
-  fastapi-server:
+  fastapi-server-sqlite:
     build: ./app/
-    container_name: fastapi-server
+    container_name: fastapi-server-sqlite
     env_file:
       - .env
     volumes:
       - ./app/src:/app/src
-    depends_on:
-      - db
+      - ./app/databases:/app/databases
     ports:
       - "${FASTAPI_HOST_IP}:${FASTAPI_HOST_PORT}:8000"
     networks:

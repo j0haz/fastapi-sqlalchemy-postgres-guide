@@ -19,9 +19,10 @@ def create_user(user: schemas.UserCreate, db: Session = dbSession):
     """ 
         endpoint for creating specified user in database 
     """
-    crud.create_user(db=db, user=user)
+    json_response = crud.create_user(db=db, user=user)
 
     return json_response
+
 
 @userCrudRouter.get("/user_read", response_model = list[schemas.UserRead])
 def read_users(skip: int = 0, limit: int = 10, db: Session = dbSession):

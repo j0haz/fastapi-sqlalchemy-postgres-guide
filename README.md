@@ -1,5 +1,5 @@
 # Welcome to my FastAPI Web Server Example
-This repository's main purpose is to provide an educational resource that showcases how to use FastAPI in conjunction with SQLAlchemy/PostgreSQL to develop REST API endpoints for web applications with persistence.
+This repository's main purpose is to provide an educational resource that showcases how to use FastAPI in conjunction with SQLAlchemy/SQLite to develop REST API endpoints for web applications with persistence.
 
 > 📝 **Disclaimer**: still need for improvements and more in-depth documentation ✍️
 
@@ -15,6 +15,7 @@ then navigate to [server's endpoint documentation](http://127.0.0.1:8080/docs)
 - [app/](app/): fastapi server application directory
     - [Dockerfile](app/Dockerfile)
     - [requirements.txt](app/requirements.txt)
+    - [databases/](app/databases/): folder for the sqlite database files
     - [src/](app/src/)
         - [model/](app/src/model): the database's tables, CRUD operations, a DB-Manager for postgres connection and pydantic schemes are defined here
         - [view/](app/src/view): contains static servable files and dynamic Jinja templates to be rendered
